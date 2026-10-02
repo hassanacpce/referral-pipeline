@@ -1,0 +1,7 @@
+output/
+.git/
+__pycache__/
+*.pyc
+.venv/
+docs/
+README.md

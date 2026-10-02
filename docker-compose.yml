@@ -1,0 +1,10 @@
+# Convenience wrapper:  docker compose up --build
+services:
+  referral-pipeline:
+    build: .
+    image: referral-pipeline:latest
+    environment:
+      DEFAULT_TZ: Asia/Jakarta
+    volumes:
+      - ./output:/app/output          # reports are written to ./output on the host
+      # - ./data/raw:/app/data/raw:ro # uncomment to use the host's CSVs instead of the baked-in copy
